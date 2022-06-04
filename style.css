@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
 }
 
 body {
@@ -13,6 +14,23 @@ body {
 .sidebar {
     background-color: rgb(81, 126, 214);
     grid-area: 1 / 1 / 5 / 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+.sidebarlist {
+    margin: 1vh;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 1vh;
+    filter:invert();
+    align-items: center;
+    font-size: 1.5rem;
+}
+
+#dashboard {
+    font-size: 2rem;
 }
 
 .header {
