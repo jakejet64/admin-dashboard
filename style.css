@@ -8,7 +8,8 @@
 body {
     margin: inherit;
     display: grid;
-    grid-template: 1fr 1fr 3fr 3fr / 1fr 2fr 1fr;
+    height: 100vh;
+    grid-template: 1fr 1fr 7fr 7fr / 1fr 2fr 1fr;
 }
 
 .sidebar {
@@ -27,6 +28,7 @@ body {
     filter:invert();
     align-items: center;
     font-size: 1.5rem;
+    margin-bottom: 6vh;
 }
 
 #dashboard {
@@ -61,6 +63,7 @@ body {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    box-shadow: 8px 15px 10px rgb(47, 47, 47);
 }
 
 .subheader div {
@@ -99,14 +102,107 @@ body {
     background-color: rgb(201, 201, 201);
 }
 
+.sectionHeading {
+    font-size: 1.2rem;
+    margin: 8px;
+    color: rgb(82, 82, 82);
+}
+
 .projects {
     grid-area: 3 / 2 / 5 / 3;
+}
+
+.projectsSection {
+    margin: 10px;
+    display: grid;
+    gap: 15px;
+    grid-template: 1fr / repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.project {
+    background: linear-gradient(90deg, rgb(255, 208, 0) 4%, rgb(238, 238, 238) 4%);
+    border-radius: 10px;
+}
+
+.project .title {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin: 8px;
+    margin-bottom: 0px;
+    margin-left: 2.5vw;
+}
+
+.project .description {
+    font-size: 1.2rem;
+    margin: 8px;
+    margin-left: 2.5vw;
+    margin-top: 0px;
+    color: rgb(82, 82, 82);
+}
+
+.projectbuttons {
+    display: flex;
+    justify-content: right;
+}
+
+.projectbuttons img {
+    margin: 7px;
 }
 
 .announcements {
     grid-area: 3 / 3 / 4 / 4;
 }
 
+.announcementsbox {
+    background-color: rgb(238, 238, 238);
+    border-radius: 10px;
+    display: grid;
+    gap: 10px;
+    padding: 20px;
+    margin-right: 10px;
+}
+
+.announcementsbox .title {
+    font-size: 1.3rem;
+}
+
+.announcementsbox .info {
+    font-size: 1.1rem;
+    color: rgb(82, 82, 82);
+}
+
 .trending {
     grid-area: 4 / 3 / 5 / 4;
+}
+
+.trendingbox {
+    background-color: rgb(238, 238, 238);
+    border-radius: 10px;
+    display: grid;
+    gap: 10px;
+    padding: 20px;
+    margin-right: 10px;
+}
+
+.trend {
+    display: grid;
+    grid-template: 1fr / auto 1fr;
+    gap: 5px;
+    align-self: center;
+}
+
+.trend .user {
+    font-size: 1.2rem;
+}
+
+.trend div:last-child {
+    font-size: 1rem;
+    color: rgb(82, 82, 82);
+}
+
+.trend img {
+    grid-row: 1 / 3;
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
 }
